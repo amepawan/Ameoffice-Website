@@ -8,12 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@700&display=swap" rel="stylesheet">
+
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
 
         :root {
@@ -158,24 +161,25 @@
         /* Marquee Styles */
         .update-marquee-container {
             background-color: #e6f7ff;
-            padding: 10px 0;
+            padding: px 0;
             position: relative;
             overflow: hidden;
-            margin-top: 80px;
+            margin-top: 100px;
         }
 
         .update-date {
             position: absolute;
-            left: 10px;
-            top: 50%;
+            display: flex;
+            left: 0px;
+            top: 30%;
             transform: translateY(-50%);
             background-color: var(--primary);
             color: white;
-            padding: 5px 10px;
+            padding: 20px 25px;
             border-radius: 4px;
-            z-index: 5;
-            font-weight: 600;
-            font-size: 0.9rem;
+            z-index: 15;
+            font-weight: 6000;
+            font-size: 1.2rem;
         }
 
         .update-marquee {
@@ -271,7 +275,7 @@
 
         /* About Section */
         .about {
-            padding: 5rem 5%;
+            padding: 2% 5%;
             background-color: white;
         }
 
@@ -294,7 +298,7 @@
 
         /* Services Section */
         .services {
-            padding: 5rem 5%;
+            padding: 3rem 3%;
             background-color: #f8fafc;
         }
 
@@ -302,7 +306,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -337,44 +341,75 @@
             font-size: 0.9rem;
         }
 
-        /* Branches Section */
-        .branches {
-            padding: 5rem 5%;
-            background-color: white;
-        }
+/* Branches Section */
+.branches {
+    padding: 5rem 5%;
+    background-color: #f0f0f0; /* Changed background color to a light grey */
+}
 
-        .branches-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.branches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .branch-card {
-            background-color: #f8fafc;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
+.branch-card {
+    background-color: #ffffff; /* Changed background color to white */
+    border-radius: 15px; /* Increased border radius for a more rounded look */
+    padding: 2.5rem; /* Increased padding for more space inside the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for more depth */
+    font-family: 'Hind', sans-serif; /* Replaced font with Hind */
+    animation: fadeInUp 1s ease-in-out; /* Added animation */
+    transition: transform 0.3s ease-in-out; /* Added transition for smooth scaling */
+}
 
-        .branch-card h3 {
-            color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
 
-        .branch-info {
-            margin-bottom: 0.5rem;
-        }
+.branch-card:hover {
+    transform: scale(1.05); /* Scale the box up when hovered */
+}
 
-        .branch-info i {
-            color: var(--primary);
-            margin-right: 0.5rem;
-            width: 20px;
-            text-align: center;
-        }
+.branch-card h3 {
+    color: var(--primary);
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 1.5rem; /* Increased margin bottom */
+    font-weight: 700; /* Increased font weight */
+    text-align: center; /* Centered the branch name */
+    position: relative;
+    padding-bottom: 1rem; /* Added padding bottom for spacing */
+}
+
+.branch-card h3::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--primary);
+    margin: 1rem auto 0; /* Centered the line */
+}
+
+.branch-info {
+    margin-bottom: 1rem; /* Increased margin bottom */
+}
+
+.branch-info i {
+    color: var(--primary);
+    margin-right: 0.75rem; /* Increased margin right */
+    width: 25px; /* Increased width */
+    text-align: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
         /* Contact Section */
         .contact {
@@ -600,7 +635,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="images/logo.png" alt="Admissions Made Easy Logo" />
+                <img src="images/LG.png" alt="Admissions Made Easy Logo" />
                 <div class="logo-text">
                     <h1>Admissions Made Easy</h1>
                     <p>Simplify Career Decision</p>
@@ -621,16 +656,20 @@
         </div>
     </header>
 
+   
+
     <!-- Marquee Updates Section -->
     <div class="update-marquee-container">
         <div class="update-date">
-            06-03-2025
+            <b>06-03-2025</b>
         </div>
-        <marquee class="update-marquee" behavior="scroll" direction="left" scrollamount="5">
-            डेटासेटमध्ये भारत (महाराष्ट्र) प्रदेशात बोलल्या जाणाऱ्या भाषांपैकी एक असलेल्या मराठी भाषेतील हस्तलिखित मजकुराच्या प्रतिमा आहेत. काही स्थानिक भाषिक लेखकांना त्यांच्या हस्ताक्षरात पूर्व-लिखित मजकूर लिहिण्यासाठी आमंत्रित करण्यात आले होते. पूर्व-लिखित मजकूर अशा प्रकारे काळजीपूर्वक लिहिला आहे की त्यात मराठी लिपीतील मजकूर लिहिण्यासाठी वापरलेले जवळजवळ सर्व वर्ण, शब्द आणि ठिपके समाविष्ट आहेत.
+        <marquee class="update-marquee" behavior="scroll" direction="left" scrollamount="8">
+        <b>‼️महत्त्वाची सूचना‼️नीट फॉर्म भरण्याची प्रक्रिया पूर्ण करण्याची आज अंतिम मुदत आहे. कुठल्याही कारणाने फॉर्म भरण्याची प्रक्रिया अपूर्ण असलेल्या विद्यार्थ्यांनी वेळेत प्रक्रिया पूर्ण करून घ्यावी ही विनंती.</b>
         </marquee>
     </div>
+    
 
+    
     <!-- Swiper Slider Section -->
     <section class="slider-section">
         <div class="section-title">
@@ -724,11 +763,12 @@
         </div>
     </section>
 
+    
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="section-title">
             <h2>Our Services</h2>
-            <p>We provide comprehensive consultancy services to help students achieve their career goals</p>
+            <h3>We provide comprehensive consultancy services to help students achieve their career goals<h3>
         </div>
         <div class="services-container">
             <div class="service-card">
@@ -777,7 +817,35 @@
         </div>
         <div class="branches-container">
             <div class="branch-card">
-                <h3>LATUR</h3>
+                <style>
+                    .branch-info span {
+                        transition: color 0.3s, background-color 0.3s;
+                        padding: 2px;
+                    }
+            
+                    .branch-info span:hover {
+                        color: white;
+                        background-color: #007BFF;
+                    }
+            
+                    h3 a {
+                        text-decoration: none; /* Removes underline */
+                        color: black; /* Ensures default text color */
+                    }
+            
+                    h3 a:hover {
+                        color: #007BFF; /* Changes color on hover */
+                    }
+                </style>
+            </head>
+            <body>
+            
+                <h3>
+                    <a href="/latur.html" target="_blank">
+                        LATUR
+                    </a>
+                </h3>
+            
                 <div class="branch-info">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Shivaji Nagar, Latur 413512</span>
@@ -816,6 +884,14 @@
         </div>
     </section>
 
+    <section id="book" class="book">
+        <iframe src=" https://flipbookpdf.net/web/site/84a7f2e7e2f19a99fa54074d9387966219945ce8202503.pdf.html" style="width: 100%; height: 50vh; border: center;"></iframe>
+        
+    </section>
+
+    
+
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="section-title">
@@ -841,28 +917,7 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
+
         </div>
     </section>
 
